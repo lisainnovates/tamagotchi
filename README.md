@@ -1,3 +1,3 @@
 # tamagotchi
 
-experimenting with generative AI and sharing my first simple apps here 😊 https://lisainnovates.github.io/tamagotchi/
+experimenting with generative AI and sharing projects here 😊 https://lisainnovates.github.io/tamagotchi/
