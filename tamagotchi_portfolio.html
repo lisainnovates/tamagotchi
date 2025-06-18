@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code-a-Gotchi Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #6ce36c;
+      font-family: 'Press Start 2P', cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .tamagotchi {
+      background: #d0d0d0;
+      border: 12px solid #fff;
+      border-radius: 50%;
+      width: 360px;
+      height: 480px;
+      position: relative;
+      box-shadow: inset -8px -8px 0px #aaa;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .screen {
+      background: #b0ffb0;
+      border: 6px inset #777;
+      height: 250px;
+      margin-bottom: 20px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .pet {
+      font-size: 40px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      to {
+        transform: translateY(-10px);
+      }
+    }
+
+    .message {
+      font-size: 10px;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .btn {
+      background: #fff;
+      border: 4px solid #333;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      font-size: 8px;
+      text-align: center;
+      padding: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: black;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      background-color: #e0ffe0;
+    }
+  </style>
+</head>
+<body>
+  <div class="tamagotchi">
+    <div class="screen">
+      <div class="pet" id="pet">🐱</div>
+      <div class="message" id="message">Welcome to my portfolio!</div>
+    </div>
+    <div class="buttons">
+      <a class="btn" href="https://lisainnovates.github.io/mewd/" target="_blank" onclick="updateMessage('Project 1 Loaded!')">PROJECT 1</a>
+      <a class="btn" href="https://lisainnovates.github.io/thyme/" target="_blank" onclick="updateMessage('Project 2 Loaded!')">PROJECT 2</a>
+    </div>
+  </div>
+
+  <script>
+    function updateMessage(text) {
+      document.getElementById('message').innerText = text;
+    }
+  </script>
+</body>
+</html>
