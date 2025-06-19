@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>lisa's projects</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <!-- Favicon as emoji -->
-  <link
-  rel="icon"
-  href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2216%22>🐱</text></svg>"
-  />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2216%22>🐱</text></svg>" />
   <style>
     body {
       margin: 0;
@@ -25,7 +21,6 @@
       position: relative;
     }
 
-    /* New top-left links container */
     .top-links {
       position: fixed;
       top: 15px;
@@ -39,6 +34,7 @@
       z-index: 9999;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     }
+
     .top-links a {
       color: white;
       text-decoration: none;
@@ -47,6 +43,7 @@
       border-radius: 8px;
       transition: background-color 0.3s, border-color 0.3s;
     }
+
     .top-links a:hover {
       background-color: rgba(255, 255, 255, 0.15);
       border-color: white;
@@ -62,13 +59,16 @@
       box-shadow: inset -8px -8px 0px #aaa;
       padding: 20px;
       box-sizing: border-box;
+      overflow: hidden; /* Keeps screen inside the bubble */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .screen {
       background: #b0ffb0;
       border: 6px inset #777;
-      height: 250px;
-      margin-bottom: 20px;
+      height: 220px; /* Reduced height to stay within circle */
       padding: 10px;
       display: flex;
       flex-direction: column;
@@ -97,6 +97,7 @@
     .buttons {
       display: flex;
       justify-content: space-around;
+      margin-top: 10px;
     }
 
     .btn {
@@ -121,13 +122,22 @@
       transform: scale(1.1);
       background-color: #e0ffe0;
     }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 10px;
+      color: white;
+      font-family: 'Press Start 2P', cursive;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+    }
   </style>
 </head>
 <body>
-  <!-- Top-left contact links -->
   <div class="top-links">
-    <a href="https://www.linkedin.com/in/lisamlopez1/" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-    <a href="https://github.com/lisainnovates" target="_blank" rel="noopener noreferrer">WORKS IN PROGRESS</a>
+    <a href="https://www.linkedin.com/in/lisamlopez1/" target="_blank">LINKEDIN</a>
+    <a href="https://github.com/lisainnovates" target="_blank">WORKS IN PROGRESS</a>
   </div>
 
   <div class="tamagotchi">
@@ -141,29 +151,14 @@
     </div>
   </div>
 
+  <div class="footer">
+    experiments brought to life by AI and curiosity
+  </div>
+
   <script>
     function updateMessage(text) {
       document.getElementById('message').innerText = text;
     }
   </script>
-    <script>
-    function updateMessage(text) {
-      document.getElementById('message').innerText = text;
-    }
-  </script>
-  
-  <div style="
-    position: absolute;
-    bottom: 20px;
-    font-size: 10px;
-    color: white;
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
-  ">
-    experiments brought to life by AI and curiosity
-  </div>
-</body>
-</html>
 </body>
 </html>
